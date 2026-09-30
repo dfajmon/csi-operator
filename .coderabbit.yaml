@@ -1,27 +1,14 @@
 # inherit any OpenShift global settings
 inheritance: true
 
-language: en-US
 reviews:
-  profile: chill
-  high_level_summary: false
-  review_status: true
-  commit_status: true
   collapse_walkthrough: true
   changed_files_summary: false
   sequence_diagrams: false
   estimate_code_review_effort: false
-  poem: false
   suggested_labels: false
-  path_filters:
-  - "!vendor/**"
-  tools:
-    golangci-lint:
-      enabled: true
+  custom_instructions: |
+    For PRs where the title contains "rebase": only review changes where the diff hunk or commit message contains "UPSTREAM:". Skip all other changes without comment.
 knowledge_base:
-  code_guidelines:
-    enabled: true
-    filePatterns:
-    - AGENTS.md
   learnings:
     scope: local
